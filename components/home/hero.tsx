@@ -111,12 +111,12 @@ export function Hero() {
         >
           <Sparkles className="h-4 w-4 text-accent-ink" aria-hidden />
           <span className="font-medium text-foreground">
-            {siteConfig.companyRole}
+            {siteConfig.heroBadge.title}
           </span>
           <span aria-hidden>·</span>
-          <span>{siteConfig.company}</span>
+          <span>{siteConfig.heroBadge.focus}</span>
           <span aria-hidden>·</span>
-          <span>{siteConfig.timezone}</span>
+          <span>{siteConfig.heroBadge.location}</span>
         </motion.div>
       </motion.div>
     </section>

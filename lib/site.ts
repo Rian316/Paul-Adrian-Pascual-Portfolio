@@ -23,7 +23,12 @@ export const siteConfig = {
   location: "Quezon City, Philippines",
   timezone: "GMT+8",
   company: "Phil Capital Trading Solution Inc.",
-  companyRole: "AI Associate",
+  /** Hero professional-identity badge (title · focus · location). */
+  heroBadge: {
+    title: "System Developer",
+    focus: "Full-Stack & AI Engineer",
+    location: "Philippines (GMT+8)",
+  },
   /** Résumé PDF served from /public. */
   resumeUrl: "/Paul-Adrian-Pascual-Resume.pdf",
   url: siteUrl,
@@ -60,12 +65,12 @@ export const stats = [
     label: "Platforms built end-to-end",
   },
   {
-    value: "22",
-    label: "PR security & reliability audit",
+    value: "AI-Driven",
+    label: "Software Development",
   },
   {
-    value: "1.50",
-    label: "College GWA — Cum Laude",
+    value: "Full-Stack",
+    label: "End-to-End Solutions",
   },
   {
     value: "GMT+8",
