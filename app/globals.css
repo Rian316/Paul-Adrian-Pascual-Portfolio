@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (toggled by next-themes on <html>) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===========================================================================
+ *  Design tokens — light & dark themes.
+ *  Accent: confident teal on cool near-white (light) / deep slate (dark).
+ *  Every color flows through these tokens; re-theming is a one-file edit.
+ * ======================================================================== */
+:root {
+  --background: #f7f8fa; /* cool near-white */
+  --surface: #ffffff;
+  --surface-2: #eef1f5;
+  --foreground: #0f1729; /* slate-950 */
+  --muted: #475569; /* slate-600 */
+  --faint: #94a3b8; /* slate-400 */
+  --border: #e3e8ef;
+  --border-strong: #cbd5e1; /* slate-300 */
+  --accent: #0f766e; /* teal-700 — fills/buttons (AA on white) */
+  --accent-ink: #0f766e; /* accent text/links/icons */
+  --accent-bright: #14b8a6; /* teal-500 — gradient highlight */
+  --accent-contrast: #ffffff; /* text on accent fills */
+  --accent-soft: rgba(13, 148, 136, 0.1);
+  --ring: #0f766e;
+  --shadow-soft:
+    0 1px 2px rgb(15 23 42 / 0.04), 0 8px 24px rgb(15 23 42 / 0.06);
+  --shadow-lift:
+    0 2px 4px rgb(15 23 42 / 0.05), 0 16px 40px rgb(15 23 42 / 0.12);
+}
+
+.dark {
+  --background: #0b1120; /* deep slate */
+  --surface: #111a2c;
+  --surface-2: #16203a;
+  --foreground: #e2e8f0; /* slate-200 */
+  --muted: #94a3b8; /* slate-400 */
+  --faint: #64748b; /* slate-500 */
+  --border: #1e293b; /* slate-800 */
+  --border-strong: #334155; /* slate-700 */
+  --accent: #14b8a6; /* teal-500 — AA on dark surfaces */
+  --accent-ink: #2dd4bf; /* teal-400 — accent text/links */
+  --accent-bright: #22d3ee; /* cyan-400 — gradient highlight */
+  --accent-contrast: #06231f; /* dark text on accent fills */
+  --accent-soft: rgba(45, 212, 191, 0.12);
+  --ring: #2dd4bf;
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.3);
+  --shadow-lift: 0 2px 4px rgb(0 0 0 / 0.3), 0 16px 40px rgb(0 0 0 / 0.4);
+}
+
+/* Expose tokens to Tailwind as utilities (bg-surface, text-muted, …). */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-bright: var(--accent-bright);
+  --color-accent-contrast: var(--accent-contrast);
+  --color-accent-soft: var(--accent-soft);
+  --color-ring: var(--ring);
+
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-space-grotesk), var(--font-sans), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* ===========================================================================
+ *  Base
+ * ======================================================================== */
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* keeps anchored sections clear of the sticky header */
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: var(--accent-soft);
+    color: var(--accent-ink);
+  }
+
+  /* Visible, on-brand focus ring for keyboard users only. */
+  :focus-visible {
+    outline: 2px solid var(--ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Respect users who reduce motion. */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+/* ===========================================================================
+ *  Utilities & effects
+ * ======================================================================== */
+@layer utilities {
+  /* Faint dotted grid used behind the hero. */
+  .bg-grid {
+    background-image: radial-gradient(
+      var(--color-border-strong) 1px,
+      transparent 1px
+    );
+    background-size: 22px 22px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      #000 30%,
+      transparent 75%
+    );
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      #000 30%,
+      transparent 75%
+    );
+  }
+
+  /* Teal wash for the hero backdrop. */
+  .glow-accent {
+    background: radial-gradient(
+      40rem 24rem at 50% -10%,
+      var(--accent-soft),
+      transparent 70%
+    );
+  }
+
+  /* Gradient text for the accent word in headings. */
+  .text-gradient {
+    background-image: linear-gradient(
+      120deg,
+      var(--accent-ink),
+      var(--accent-bright)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted surface for the sticky header (subtle, works in both themes). */
+  .glass {
+    background-color: color-mix(in srgb, var(--background) 80%, transparent);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+
+  /* Without JS, Framer Motion's inline "hidden" styles would blank the page.
+     The inline <script> in layout.tsx adds .js before paint; if it never runs,
+     force all gated elements fully visible (a11y + crawler safety). */
+  html:not(.js) .js-gate,
+  html:not(.js) .js-gate * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+}
