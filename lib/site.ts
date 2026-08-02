@@ -18,7 +18,7 @@ export const siteConfig = {
   heroHeadline: "I build AI-integrated SaaS and ship it to production.",
   /** Hero subheadline — the specifics that back the headline. */
   heroSub:
-    "Solo, end to end — three production platforms in healthcare & clinic operations: booking, HMO management, payments, and LLM-powered intake. Next.js · TypeScript · Prisma.",
+    "Solo, end to end — production platforms in healthcare & clinic operations: booking, HMO management, payments, and LLM-powered intake. Next.js · TypeScript · Prisma.",
   availability: "Open to senior roles & freelance",
   location: "Quezon City, Philippines",
   timezone: "GMT+8",
@@ -56,7 +56,7 @@ export type SiteConfig = typeof siteConfig;
 /** Stats surfaced in the hero stats band. */
 export const stats = [
   {
-    value: "3",
+    value: "2",
     label: "Platforms built end-to-end",
   },
   {

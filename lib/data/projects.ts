@@ -3,12 +3,12 @@ import type { Project } from "@/types/project";
 /* ===========================================================================
  *  Copy sourced from Paul's résumé. Facts (stack, role, audit details) follow
  *  the résumé. Status per Paul: ColabHealth is live in production; Sandbox
- *  Clinic Prime and Drip & Thrive are in development.
+ *  Clinic Prime is deployed in production.
  *
  *  COVERS: ColabHealth uses a real screenshot of the live site
- *  (public/projects/colabhealth.png). Sandbox Clinic Prime and Drip & Thrive
- *  use generated gradient covers because they aren't publicly reachable —
- *  drop real screenshots at their imageUrl paths to replace them.
+ *  (public/projects/colabhealth.png). Sandbox Clinic Prime uses a generated
+ *  gradient cover because it isn't publicly reachable — drop a real
+ *  screenshot at its imageUrl path to replace it.
  * ======================================================================== */
 
 export const projects: Project[] = [
@@ -73,35 +73,9 @@ export const projects: Project[] = [
       "Vercel",
       "Alibaba Cloud",
     ],
-    status: "in-development",
+    status: "production",
     imageUrl: "/projects/sandbox-clinic.svg",
     accent: { from: "#818cf8", to: "#6366f1" },
-    timeframe: "2026",
-  },
-  {
-    slug: "drip-and-thrive",
-    title: "Drip & Thrive",
-    tagline: "Embeddable assessment widget for wellness clinics",
-    description:
-      "A portable, embeddable widget for wellness clinics. A conversational quiz engine runs a multi-step medical-safety assessment, flags risks, recommends a personalized protocol, and captures the lead — shipped as a zero-dependency, drop-in artifact that can be rapidly reskinned for different clinic brands.",
-    overview:
-      "Drip & Thrive is a portable, embeddable frontend widget for wellness clinics. It runs a conversational quiz engine with medical-safety screening and protocol-routing logic: a multi-step assessment detects medical flags, recommends a personalized protocol, and captures the lead. It's built as a zero-dependency, drop-in artifact with a documented generation prompt, so it can be rapidly reskinned for different clinic brands.",
-    highlights: [
-      "Conversational quiz engine with multi-step medical-safety screening.",
-      "Flow: assessment → medical-flag detection → personalized protocol → lead capture.",
-      "Zero-dependency, drop-in widget that embeds into any site.",
-      "Documented generation prompt enables rapid reskinning across clinic brands.",
-    ],
-    role: "Solo developer",
-    techStack: [
-      "React",
-      "TypeScript",
-      "TailwindCSS",
-      "Embeddable Widget Architecture",
-    ],
-    status: "in-development",
-    imageUrl: "/projects/drip-and-thrive.svg",
-    accent: { from: "#10b981", to: "#22d3ee" },
     timeframe: "2026",
   },
 ];
