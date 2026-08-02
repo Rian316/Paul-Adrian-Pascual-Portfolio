@@ -15,10 +15,10 @@ export const siteConfig = {
   shortName: "Paul Pascual",
   role: "Full-Stack Developer & AI Integration Engineer",
   /** Hero headline — leads with value, keyword-rich for SEO + hiring. */
-  heroHeadline: "I build AI-integrated SaaS and ship it to production.",
+  heroHeadline: "I build production-ready software powered by AI.",
   /** Hero subheadline — the specifics that back the headline. */
   heroSub:
-    "Solo, end to end — production platforms in healthcare & clinic operations: booking, HMO management, payments, and LLM-powered intake. Next.js · TypeScript · Prisma.",
+    "I build end-to-end software solutions—from internal business systems and dashboards to AI-powered web applications. Experienced in Next.js, React, TypeScript, Node.js, Prisma, PostgreSQL, cloud deployment, and modern AI-assisted development workflows.",
   availability: "Open to senior roles & freelance",
   location: "Quezon City, Philippines",
   timezone: "GMT+8",

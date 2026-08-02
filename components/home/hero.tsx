@@ -57,8 +57,8 @@ export function Hero() {
           variants={item}
           className="mt-6 max-w-3xl text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-6xl"
         >
-          I build <span className="text-gradient">AI-integrated SaaS</span> and
-          ship it to production.
+          I build production-ready software{" "}
+          <span className="text-gradient">powered by AI.</span>
         </motion.h1>
 
         <motion.p
