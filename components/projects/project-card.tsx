@@ -7,10 +7,11 @@ import { ProjectCover } from "@/components/projects/project-cover";
 
 const STATUS_LABEL: Record<
   Project["status"],
-  { label: string; variant: "success" | "warning" }
+  { label: string; variant: "success" | "warning" | "info" }
 > = {
   production: { label: "Live", variant: "success" },
   "in-development": { label: "In development", variant: "warning" },
+  "for-deployment": { label: "For deployment", variant: "info" },
 };
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -41,7 +42,9 @@ export function ProjectCard({ project }: { project: Project }) {
               "h-1.5 w-1.5 rounded-full",
               project.status === "production"
                 ? "bg-emerald-500"
-                : "bg-amber-500",
+                : project.status === "for-deployment"
+                  ? "bg-sky-500"
+                  : "bg-amber-500",
             )}
           />
           {status.label}
@@ -62,6 +65,11 @@ export function ProjectCard({ project }: { project: Project }) {
         <p className="mt-2 text-sm leading-relaxed text-muted">
           {project.tagline}
         </p>
+        {project.purpose && (
+          <p className="mt-1 text-xs leading-relaxed text-faint italic">
+            {project.purpose}
+          </p>
+        )}
 
         <ul className="mt-4 flex flex-wrap gap-1.5">
           {project.techStack.slice(0, 4).map((tech) => (

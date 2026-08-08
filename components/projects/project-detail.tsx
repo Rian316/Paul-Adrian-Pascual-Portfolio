@@ -16,10 +16,11 @@ import { ProjectCover } from "@/components/projects/project-cover";
 
 const STATUS_LABEL: Record<
   Project["status"],
-  { label: string; variant: "success" | "warning" }
+  { label: string; variant: "success" | "warning" | "info" }
 > = {
   production: { label: "Live", variant: "success" },
   "in-development": { label: "In development", variant: "warning" },
+  "for-deployment": { label: "For deployment", variant: "info" },
 };
 
 function MetaItem({ label, value }: { label: string; value: string }) {

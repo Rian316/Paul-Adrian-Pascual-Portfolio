@@ -44,6 +44,7 @@ export const projects: Project[] = [
     imageUrl: "/projects/colabhealth.png",
     accent: { from: "#2dd4bf", to: "#0ea5e9" },
     timeframe: "2026",
+    purpose: "Streamline healthcare bookings and HMO management for Philippine clinics.",
   },
   {
     slug: "sandbox-clinic",
@@ -77,6 +78,7 @@ export const projects: Project[] = [
     imageUrl: "/projects/sandbox-clinic.svg",
     accent: { from: "#818cf8", to: "#6366f1" },
     timeframe: "2026",
+    purpose: "Centralize clinic operations — bookings, scheduling, HMO workflows, and payments.",
   },
   {
     slug: "ai-job-application-tracker",
@@ -105,10 +107,11 @@ export const projects: Project[] = [
       "ESLint",
       "Prettier",
     ],
-    status: "in-development",
+    status: "for-deployment",
     imageUrl: "/projects/ai-job-application-tracker.svg",
     accent: { from: "#38bdf8", to: "#0ea5e9" },
     timeframe: "2026",
+    purpose: "Track and manage job applications with AI-powered assistance.",
   },
 ];
 

@@ -5,7 +5,7 @@
  * of truth — the cards on `/work` and the detail pages at `/work/[slug]` are
  * both driven by it.
  */
-export type ProjectStatus = "production" | "in-development";
+export type ProjectStatus = "production" | "in-development" | "for-deployment";
 
 export interface Project {
   /** URL segment, e.g. `colabhealth` → /work/colabhealth */
@@ -38,4 +38,6 @@ export interface Project {
   };
   /** Display year / timeframe. */
   timeframe: string;
+  /** Quick one-liner purpose shown on the card. */
+  purpose?: string;
 }
