@@ -78,6 +78,38 @@ export const projects: Project[] = [
     accent: { from: "#818cf8", to: "#6366f1" },
     timeframe: "2026",
   },
+  {
+    slug: "ai-job-application-tracker",
+    title: "AI Job Application Tracker",
+    tagline: "Track and manage job applications with AI assistance",
+    description:
+      "A full-stack web application for tracking job applications with AI-powered features, built with Next.js, Prisma, and shadcn/ui. It includes authentication, database management, and a modern responsive interface.",
+    overview:
+      "AI Job Application Tracker is a Next.js application designed to help users manage their job search process. It features a Prisma ORM database layer, TypeScript strict mode, and a polished UI built with shadcn/ui components. The project includes Docker support for deployment, ESLint and Prettier for code quality, and Husky with commitlint for standardized commit practices.",
+    highlights: [
+      "Next.js 15 with TypeScript and App Router architecture.",
+      "Prisma ORM for database management and type-safe queries.",
+      "shadcn/ui component library for a modern, accessible interface.",
+      "Docker support with Dockerfile and docker-compose.yml for easy deployment.",
+      "ESLint, Prettier, Husky, and commitlint for code quality and consistency.",
+    ],
+    role: "Full-stack developer",
+    techStack: [
+      "Next.js 15",
+      "TypeScript",
+      "Prisma ORM",
+      "shadcn/ui",
+      "TailwindCSS",
+      "PostgreSQL",
+      "Docker",
+      "ESLint",
+      "Prettier",
+    ],
+    status: "in-development",
+    imageUrl: "/projects/ai-job-application-tracker.svg",
+    accent: { from: "#38bdf8", to: "#0ea5e9" },
+    timeframe: "2026",
+  },
 ];
 
 /** Lookup by slug — used by the detail route and generateStaticParams. */
