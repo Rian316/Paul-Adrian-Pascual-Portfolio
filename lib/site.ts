@@ -61,7 +61,7 @@ export type SiteConfig = typeof siteConfig;
 /** Stats surfaced in the hero stats band. */
 export const stats = [
   {
-    value: "2",
+    value: "3",
     label: "Platforms built end-to-end",
   },
   {
