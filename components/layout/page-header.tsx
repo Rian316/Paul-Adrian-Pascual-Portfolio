@@ -4,10 +4,11 @@ interface PageHeaderProps {
   eyebrow?: string;
   title: string;
   description?: string;
+  action?: React.ReactNode;
 }
 
 /** Consistent intro block for interior pages (/work, /about, /contact). */
-export function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
+export function PageHeader({ eyebrow, title, description, action }: PageHeaderProps) {
   return (
     <header className="relative overflow-hidden">
       <div
@@ -33,6 +34,7 @@ export function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
               {description}
             </p>
           ) : null}
+          {action}
         </Reveal>
       </div>
     </header>
