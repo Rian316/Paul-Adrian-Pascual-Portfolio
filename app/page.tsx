@@ -6,13 +6,14 @@ import { Hero } from "@/components/home/hero";
 import { StatsBand } from "@/components/home/stats-band";
 import { Capabilities } from "@/components/home/capabilities";
 import { TechStack } from "@/components/home/tech-stack";
-import { AboutIntro } from "@/components/home/about-intro";
-import { AboutSnapshot } from "@/components/home/about-snapshot";
+import { TechPills } from "@/components/home/tech-pills";
+import { BentoAbout } from "@/components/home/bento-about";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ProjectGrid } from "@/components/projects/project-grid";
 import { CtaBand } from "@/components/contact/cta-band";
 import { ButtonLink } from "@/components/ui/button-link";
+import { ReviewsSection } from "@/components/reviews/reviews-section";
 
 // Person structured data for richer search results.
 const personJsonLd = {
@@ -69,8 +70,11 @@ export default function HomePage() {
         <div className="mt-12">
           <Capabilities />
         </div>
-        <div className="mt-6">
+        <div className="mt-8">
           <TechStack />
+        </div>
+        <div className="mt-6">
+          <TechPills />
         </div>
       </Section>
 
@@ -80,24 +84,12 @@ export default function HomePage() {
           title="One engineer, the whole product"
           description="From data model to production — product, security, and the AI — without a team."
         />
-        <div className="mt-10 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
-          <div className="flex flex-col gap-8">
-            <AboutIntro />
-            <ButtonLink
-              href="/about"
-              variant="ghost"
-              className="self-start px-0"
-            >
-              Read more about me
-              <ArrowRight
-                className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                aria-hidden
-              />
-            </ButtonLink>
-          </div>
-          <AboutSnapshot />
+        <div className="mt-10">
+          <BentoAbout />
         </div>
       </Section>
+
+      <ReviewsSection />
 
       <CtaBand />
     </>

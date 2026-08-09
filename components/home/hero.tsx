@@ -35,6 +35,14 @@ export function Hero() {
         aria-hidden
         className="glow-accent pointer-events-none absolute inset-0"
       />
+      <div
+        aria-hidden
+        className="bg-blobs pointer-events-none absolute inset-0"
+      />
+      <div
+        aria-hidden
+        className="noise pointer-events-none absolute inset-0 opacity-30"
+      />
 
       <motion.div
         variants={container}

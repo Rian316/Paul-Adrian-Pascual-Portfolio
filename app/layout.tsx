@@ -8,6 +8,8 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { BackToTop } from "@/components/layout/back-to-top";
+import { ContactFab } from "@/components/layout/contact-fab";
+import { LoadingScreen } from "@/components/layout/loading-screen";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -98,6 +100,7 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col antialiased">
         <Providers>
+          <LoadingScreen />
           <a
             href="#main"
             className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-accent-contrast"
@@ -110,6 +113,7 @@ export default function RootLayout({
             {children}
           </main>
           <Footer />
+          <ContactFab />
           <BackToTop />
         </Providers>
       </body>

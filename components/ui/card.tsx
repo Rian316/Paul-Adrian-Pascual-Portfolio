@@ -16,6 +16,21 @@ const Card = React.forwardRef<
 ));
 Card.displayName = "Card";
 
+const GlassCard = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "glass-card rounded-3xl border border-border/60 text-foreground shadow-soft transition-all duration-500 hover:border-border/80",
+      className,
+    )}
+    {...props}
+  />
+));
+GlassCard.displayName = "GlassCard";
+
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -70,6 +85,7 @@ CardFooter.displayName = "CardFooter";
 
 export {
   Card,
+  GlassCard,
   CardHeader,
   CardTitle,
   CardDescription,
