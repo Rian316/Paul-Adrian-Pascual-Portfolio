@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { socialLinks } from "@/lib/data/social";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -65,8 +65,11 @@ export function Hero() {
           variants={item}
           className="mt-6 max-w-3xl text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-6xl"
         >
-          I build production-ready software{" "}
-          <span className="text-gradient">powered by AI.</span>
+          AI-Driven Full-Stack Developer{" "}
+          <span className="text-gradient">
+            specializing in cloud applications, SaaS platforms, and
+            AI-powered solutions.
+          </span>
         </motion.h1>
 
         <motion.p
@@ -83,6 +86,10 @@ export function Hero() {
           <ButtonLink href="/work" size="lg">
             View my work
             <ArrowRight className="h-4 w-4" aria-hidden />
+          </ButtonLink>
+          <ButtonLink href="/contact" size="lg" variant="outline">
+            <MessageCircle className="h-4 w-4" aria-hidden />
+            Get in touch
           </ButtonLink>
         </motion.div>
 

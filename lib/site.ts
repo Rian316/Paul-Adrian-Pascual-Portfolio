@@ -15,20 +15,20 @@ export const siteUrl = (
 export const siteConfig = {
   name: "Paul Adrian O. Pascual",
   shortName: "Paul Pascual",
-  role: "Full-Stack Developer & AI Integration Engineer",
+  role: "AI-Driven Full-Stack Developer",
   /** Hero headline — leads with value, keyword-rich for SEO + hiring. */
   heroHeadline: "I build production-ready software powered by AI.",
   /** Hero subheadline — the specifics that back the headline. */
   heroSub:
-    "I build end-to-end software solutions—from internal business systems and dashboards to AI-powered web applications. Experienced in Next.js, React, TypeScript, Node.js, Prisma, PostgreSQL, cloud deployment, and modern AI-assisted development workflows.",
+    "AI-Driven Full-Stack Developer specializing in cloud applications, SaaS platforms, and AI-powered solutions. Experienced in Next.js, React, TypeScript, Node.js, Prisma, PostgreSQL, Alibaba Cloud, and modern AI-assisted development workflows.",
   availability: "Open to senior roles & freelance",
   location: "Quezon City, Philippines",
   timezone: "GMT+8",
   company: "Phil Capital Trading Solution Inc.",
   /** Hero professional-identity badge (title · focus · location). */
   heroBadge: {
-    title: "System Developer",
-    focus: "Full-Stack & AI Engineer",
+    title: "Full-Stack Developer",
+    focus: "Cloud · SaaS · AI",
     location: "Philippines (GMT+8)",
   },
   /** Résumé PDF served from /public. */
@@ -36,19 +36,26 @@ export const siteConfig = {
   url: siteUrl,
   /** SEO title — front-loads discovery keywords, name second. */
   seoTitle:
-    "Full-Stack & AI Integration Engineer · Next.js & Healthcare SaaS — Paul Adrian Pascual",
+    "Paul Adrian Pascual — Full-Stack Developer · AI Engineer · Cloud & SaaS",
   /** Reused as the default meta description. */
   description:
-    "Full-stack developer & AI integration engineer (Philippines, GMT+8) building production Next.js SaaS — healthcare booking, HMO, payments, and LLM integrations. Open to senior remote roles & freelance.",
+    "AI-Driven Full-Stack Developer from the Philippines building production SaaS platforms with Next.js, TypeScript, PostgreSQL, Alibaba Cloud, and AI integrations. Open to senior remote roles & freelance.",
   keywords: [
     "Full-Stack Developer Philippines",
     "AI Integration Engineer",
     "Next.js Developer",
-    "Healthcare SaaS Developer",
+    "Cloud Engineer",
+    "SaaS Developer",
     "TypeScript",
     "LLM integration",
+    "Alibaba Cloud",
+    "Vercel",
+    "PostgreSQL",
+    "Prisma ORM",
     "Paul Adrian Pascual",
     "remote developer",
+    "healthcare SaaS",
+    "AI-powered applications",
   ],
   navItems: [
     { href: "/", label: "Home" },

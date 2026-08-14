@@ -8,12 +8,14 @@ import { Capabilities } from "@/components/home/capabilities";
 import { TechStack } from "@/components/home/tech-stack";
 import { TechPills } from "@/components/home/tech-pills";
 import { BentoAbout } from "@/components/home/bento-about";
+import { ProfessionalHighlights } from "@/components/home/professional-highlights";
+import { ImpactResults } from "@/components/home/impact-results";
+import { ExperienceSnapshot } from "@/components/home/experience-snapshot";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { ProjectGrid } from "@/components/projects/project-grid";
 import { CtaBand } from "@/components/contact/cta-band";
 import { ButtonLink } from "@/components/ui/button-link";
-import { ReviewsSection } from "@/components/reviews/reviews-section";
 
 // Person structured data for richer search results.
 const personJsonLd = {
@@ -46,7 +48,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Featured Work"
             title="Platforms I've shipped"
-            description="A few products I've built end-to-end — from data model to production deployment."
+            description="Products I've built end-to-end — from data model to production deployment."
           />
           <ButtonLink href="/work" variant="ghost" className="px-0">
             All projects
@@ -61,7 +63,18 @@ export default function HomePage() {
         </div>
       </Section>
 
-      <Section id="stack" className="border-y border-border bg-surface/30">
+      <Section id="impact" className="border-y border-border bg-surface/30">
+        <SectionHeading
+          eyebrow="Impact & Results"
+          title="By the numbers"
+          description="Truthful metrics — no invented users, revenue, or percentages."
+        />
+        <div className="mt-12">
+          <ImpactResults />
+        </div>
+      </Section>
+
+      <Section id="stack">
         <SectionHeading
           eyebrow="How I work"
           title="What I bring to a build"
@@ -78,6 +91,28 @@ export default function HomePage() {
         </div>
       </Section>
 
+      <Section id="highlights" className="border-y border-border bg-surface/30">
+        <SectionHeading
+          eyebrow="Professional Highlights"
+          title="Why work with me"
+          description="Credentials, certifications, and engineering principles that define my work."
+        />
+        <div className="mt-12">
+          <ProfessionalHighlights />
+        </div>
+      </Section>
+
+      <Section id="experience">
+        <SectionHeading
+          eyebrow="Experience"
+          title="Where I've worked"
+          description="Professional experience across freelancing and government systems."
+        />
+        <div className="mt-12 max-w-3xl">
+          <ExperienceSnapshot />
+        </div>
+      </Section>
+
       <Section id="about">
         <SectionHeading
           eyebrow="About"
@@ -88,8 +123,6 @@ export default function HomePage() {
           <BentoAbout />
         </div>
       </Section>
-
-      <ReviewsSection />
 
       <CtaBand />
     </>

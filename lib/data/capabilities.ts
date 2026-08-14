@@ -6,18 +6,18 @@ export const capabilities = [
     icon: Rocket,
     title: "Full-stack product ownership",
     description:
-      "From data model to deployment — booking, payments, auth, and admin built end-to-end, without a team.",
+      "From data model to deployment — booking, payments, auth, admin, and AI built end-to-end. Two production SaaS platforms shipped solo.",
   },
   {
     icon: ShieldCheck,
     title: "Security & reliability hardening",
     description:
-      "Concurrency, transaction safety, rate limiting, RBAC, and audit logging — including a 22-PR security audit.",
+      "RBAC, audit logging, rate limiting, transaction safety, and concurrency handling — including a 22-PR security audit across authentication and data flows.",
   },
   {
     icon: BrainCircuit,
     title: "AI integration",
     description:
-      "LLM-powered flows wired into real products — conversational intake and chatbots on DashScope (Qwen-Plus).",
+      "LLM-powered features wired into production products — chatbots, triage, and conversational interfaces using Alibaba DashScope (Qwen-Plus).",
   },
 ] as const;

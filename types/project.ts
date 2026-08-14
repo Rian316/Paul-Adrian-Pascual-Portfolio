@@ -40,4 +40,18 @@ export interface Project {
   timeframe: string;
   /** Quick one-liner purpose shown on the card. */
   purpose?: string;
+  /** Case study: what problem this project solves. */
+  problem?: string;
+  /** Case study: how it was solved. */
+  solution?: string;
+  /** Case study: architecture decisions. */
+  architecture?: string;
+  /** Case study: key challenges faced. */
+  challenges?: string;
+  /** Case study: security measures implemented. */
+  security?: string;
+  /** Case study: deployment details. */
+  deployment?: string;
+  /** Case study: outcomes and results. */
+  outcome?: string;
 }

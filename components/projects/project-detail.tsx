@@ -5,7 +5,13 @@ import {
   CalendarDays,
   CheckCircle2,
   ExternalLink,
+  Layers,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Target,
   UserRound,
+  Wrench,
 } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import type { Project } from "@/types/project";
@@ -31,6 +37,28 @@ function MetaItem({ label, value }: { label: string; value: string }) {
       </dt>
       <dd className="mt-1 text-sm font-medium text-foreground">{value}</dd>
     </div>
+  );
+}
+
+function CaseStudySection({
+  icon: Icon,
+  title,
+  children,
+}: {
+  icon: React.ElementType;
+  title: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <Reveal>
+      <section>
+        <h2 className="flex items-center gap-2 font-display text-xl font-semibold">
+          <Icon className="h-5 w-5 text-accent-ink" aria-hidden />
+          {title}
+        </h2>
+        <p className="mt-3 leading-relaxed text-muted">{children}</p>
+      </section>
+    </Reveal>
   );
 }
 
@@ -85,6 +113,48 @@ export function ProjectDetail({ project }: { project: Project }) {
               </p>
             </section>
           </Reveal>
+
+          {project.problem && (
+            <CaseStudySection icon={Target} title="Problem">
+              {project.problem}
+            </CaseStudySection>
+          )}
+
+          {project.solution && (
+            <CaseStudySection icon={Lightbulb} title="Solution">
+              {project.solution}
+            </CaseStudySection>
+          )}
+
+          {project.architecture && (
+            <CaseStudySection icon={Layers} title="Architecture">
+              {project.architecture}
+            </CaseStudySection>
+          )}
+
+          {project.challenges && (
+            <CaseStudySection icon={Wrench} title="Challenges">
+              {project.challenges}
+            </CaseStudySection>
+          )}
+
+          {project.security && (
+            <CaseStudySection icon={Shield} title="Security">
+              {project.security}
+            </CaseStudySection>
+          )}
+
+          {project.deployment && (
+            <CaseStudySection icon={Rocket} title="Deployment">
+              {project.deployment}
+            </CaseStudySection>
+          )}
+
+          {project.outcome && (
+            <CaseStudySection icon={CheckCircle2} title="Outcome">
+              {project.outcome}
+            </CaseStudySection>
+          )}
 
           <Reveal>
             <section aria-label="Highlights">

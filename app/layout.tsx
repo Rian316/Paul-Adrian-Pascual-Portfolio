@@ -48,11 +48,20 @@ export const metadata: Metadata = {
     siteName: `${siteConfig.shortName} — Portfolio`,
     title: `${siteConfig.name} — ${siteConfig.role}`,
     description: siteConfig.description,
+    images: [
+      {
+        url: `${siteUrl}/opengraph-image`,
+        width: 1200,
+        height: 630,
+        alt: `${siteConfig.name} — ${siteConfig.role}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.name} — ${siteConfig.role}`,
     description: siteConfig.description,
+    images: [`${siteUrl}/opengraph-image`],
   },
   robots: {
     index: true,
