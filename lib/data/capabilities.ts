@@ -1,23 +1,47 @@
-import { BrainCircuit, Rocket, ShieldCheck } from "lucide-react";
+import { BrainCircuit, Cloud, Code2, Rocket, ShieldCheck, Server } from "lucide-react";
 
-/** The three capabilities Paul leads with — shown on the home page. */
+/** The capabilities Paul leads with — shown on the home page. */
 export const capabilities = [
   {
     icon: Rocket,
     title: "Full-stack product ownership",
     description:
-      "From data model to deployment — booking, payments, auth, admin, and AI built end-to-end. Two production SaaS platforms shipped solo.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Security & reliability hardening",
-    description:
-      "RBAC, audit logging, rate limiting, transaction safety, and concurrency handling — including a 22-PR security audit across authentication and data flows.",
+      "From data model to deployment — booking, payments, auth, admin, and AI built end-to-end. Production SaaS platforms shipped solo.",
+    techs: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL"],
   },
   {
     icon: BrainCircuit,
-    title: "AI integration",
+    title: "AI-powered applications",
     description:
-      "LLM-powered features wired into production products — chatbots, triage, and conversational interfaces using Alibaba DashScope (Qwen-Plus).",
+      "LLM features wired into production products — chatbots, triage, code review, and conversational interfaces.",
+    techs: ["Claude", "Alibaba DashScope", "OpenAI SDKs", "TypeScript"],
+  },
+  {
+    icon: ShieldCheck,
+    title: "Security & reliability",
+    description:
+      "RBAC, audit logging, rate limiting, transaction safety, and concurrency handling — hardened through systematic security audits.",
+    techs: ["Auth.js", "RBAC", "Rate Limiting", "Audit Logging"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & deployment",
+    description:
+      "Application deployment, infrastructure configuration, containerization, and modern hosting platforms.",
+    techs: ["Alibaba Cloud", "Vercel", "Docker", "NGINX"],
+  },
+  {
+    icon: Server,
+    title: "Enterprise & business systems",
+    description:
+      "Operational workflows — recruitment, asset management, healthcare, clinic operations, and internal business processes.",
+    techs: ["SAP Business One", "PayMongo", "Prisma", "PostgreSQL"],
+  },
+  {
+    icon: Code2,
+    title: "Developer tooling",
+    description:
+      "Code quality, CI/CD pipelines, automated testing frameworks, and development workflow optimization.",
+    techs: ["ESLint", "Prettier", "Husky", "GitHub Actions", "Docker"],
   },
 ] as const;

@@ -1,10 +1,11 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, MessageCircle, Sparkles } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { socialLinks } from "@/lib/data/social";
 import { ButtonLink } from "@/components/ui/button-link";
+import { TechnicalGraph } from "@/components/home/technical-graph";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
@@ -37,10 +38,6 @@ export function Hero() {
       />
       <div
         aria-hidden
-        className="bg-blobs pointer-events-none absolute inset-0"
-      />
-      <div
-        aria-hidden
         className="noise pointer-events-none absolute inset-0 opacity-30"
       />
 
@@ -48,81 +45,97 @@ export function Hero() {
         variants={container}
         initial="hidden"
         animate="show"
-        className="js-gate relative mx-auto w-full max-w-6xl px-5 pt-20 pb-24 sm:px-8 sm:pt-28 sm:pb-32"
+        className="js-gate relative mx-auto w-full max-w-6xl px-5 pt-20 pb-16 sm:px-8 sm:pt-28 sm:pb-20"
       >
-        <motion.p
-          variants={item}
-          className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-3.5 py-1.5 text-xs font-medium text-muted shadow-soft"
-        >
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
-          </span>
-          {siteConfig.availability}
-        </motion.p>
+        <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-center lg:gap-16">
+          <div>
+            <motion.p
+              variants={item}
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-surface/70 px-3.5 py-1.5 text-xs font-medium text-muted shadow-soft"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              </span>
+              {siteConfig.availability}
+            </motion.p>
 
-        <motion.h1
-          variants={item}
-          className="mt-6 max-w-3xl text-4xl leading-[1.08] font-bold tracking-tight text-balance sm:text-6xl"
-        >
-          AI-Driven Full-Stack Developer{" "}
-          <span className="text-gradient">
-            specializing in cloud applications, SaaS platforms, and
-            AI-powered solutions.
-          </span>
-        </motion.h1>
+            <motion.h1
+              variants={item}
+              className="mt-6 max-w-2xl text-3xl leading-[1.12] font-bold tracking-tight text-balance sm:text-5xl"
+            >
+              IT Professional & Full-Stack Developer building modern web
+              applications and{" "}
+              <span className="text-gradient">AI-powered digital systems.</span>
+            </motion.h1>
 
-        <motion.p
-          variants={item}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-muted"
-        >
-          {siteConfig.heroSub}
-        </motion.p>
+            <motion.p
+              variants={item}
+              className="mt-5 max-w-xl text-base leading-relaxed text-muted sm:text-lg"
+            >
+              I design, build, and deploy production software — from cloud
+              infrastructure and databases to AI integrations and secure
+              authentication. Currently focused on SaaS platforms, automation,
+              and developer tooling.
+            </motion.p>
 
+            <motion.div
+              variants={item}
+              className="mt-8 flex flex-wrap items-center gap-3"
+            >
+              <ButtonLink href="/work" size="lg">
+                View selected work
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </ButtonLink>
+              <ButtonLink href="/contact" size="lg" variant="outline">
+                <MessageCircle className="h-4 w-4" aria-hidden />
+                Let&apos;s connect
+              </ButtonLink>
+            </motion.div>
+
+            <motion.ul
+              variants={item}
+              aria-label="Social profiles"
+              className="mt-8 flex items-center gap-3"
+            >
+              {socialLinks.map(({ platform, label, href, icon: Icon }) => (
+                <li key={platform}>
+                  <a
+                    href={href}
+                    aria-label={label}
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-border bg-surface text-muted shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent-ink"
+                  >
+                    <Icon aria-hidden className="h-4 w-4" />
+                  </a>
+                </li>
+              ))}
+            </motion.ul>
+          </div>
+
+          <motion.div
+            variants={item}
+            className="hidden lg:block"
+          >
+            <TechnicalGraph />
+          </motion.div>
+        </div>
+
+        {/* Credibility strip */}
         <motion.div
           variants={item}
-          className="mt-9 flex flex-wrap items-center gap-3"
+          className="mt-12 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-border pt-6 text-xs text-muted"
         >
-          <ButtonLink href="/work" size="lg">
-            View my work
-            <ArrowRight className="h-4 w-4" aria-hidden />
-          </ButtonLink>
-          <ButtonLink href="/contact" size="lg" variant="outline">
-            <MessageCircle className="h-4 w-4" aria-hidden />
-            Get in touch
-          </ButtonLink>
-        </motion.div>
-
-        <motion.ul
-          variants={item}
-          aria-label="Social profiles"
-          className="mt-10 flex items-center gap-3"
-        >
-          {socialLinks.map(({ platform, label, href, icon: Icon }) => (
-            <li key={platform}>
-              <a
-                href={href}
-                aria-label={label}
-                className="flex h-11 w-11 items-center justify-center rounded-xl border border-border bg-surface text-muted shadow-soft transition-all duration-200 hover:-translate-y-0.5 hover:border-accent hover:text-accent-ink"
-              >
-                <Icon aria-hidden className="h-5 w-5" />
-              </a>
-            </li>
-          ))}
-        </motion.ul>
-
-        <motion.div
-          variants={item}
-          className="mt-12 inline-flex flex-wrap items-center gap-2 rounded-xl border border-border bg-surface/70 px-4 py-3 text-sm text-muted shadow-soft"
-        >
-          <Sparkles className="h-4 w-4 text-accent-ink" aria-hidden />
           <span className="font-medium text-foreground">
-            {siteConfig.heroBadge.title}
+            BS Information Technology · Cum Laude
           </span>
           <span aria-hidden>·</span>
-          <span>{siteConfig.heroBadge.focus}</span>
+          <span>Full-Stack Development</span>
           <span aria-hidden>·</span>
-          <span>{siteConfig.heroBadge.location}</span>
+          <span>AI Integration</span>
+          <span aria-hidden>·</span>
+          <span>Cloud & Deployment</span>
+          <span aria-hidden>·</span>
+          <span>7 Certifications</span>
         </motion.div>
       </motion.div>
     </section>

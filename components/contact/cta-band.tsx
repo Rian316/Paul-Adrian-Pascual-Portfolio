@@ -1,10 +1,11 @@
-import { ArrowRight } from "lucide-react";
+import { Mail } from "lucide-react";
+import { SiGithub } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa6";
 import { siteConfig } from "@/lib/site";
 import { Container } from "@/components/layout/container";
 import { Reveal } from "@/components/ui/reveal";
 import { ButtonLink } from "@/components/ui/button-link";
 
-/** Closing call-to-action band (home + about). */
 export function CtaBand() {
   return (
     <section className="relative overflow-hidden border-t border-border">
@@ -23,19 +24,37 @@ export function CtaBand() {
               {siteConfig.availability}
             </p>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-balance sm:text-5xl">
-              Have a product to own — or an AI to wire in?
+              Let&apos;s build something useful.
             </h2>
             <p className="mt-5 text-lg leading-relaxed text-muted">
-              I take products from data model to production, solo, end to end.
-              Let&apos;s talk about what you&apos;re building.
+              A good project starts with a clear problem. I&apos;m interested in
+              building practical software, AI-powered applications, and systems
+              that make real workflows better.
             </p>
-            <ButtonLink href="/contact" size="lg" className="mt-9">
-              Get in touch
-              <ArrowRight
-                className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                aria-hidden
-              />
-            </ButtonLink>
+            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+              <ButtonLink href="/contact" size="lg">
+                <Mail className="h-4 w-4" aria-hidden />
+                Email me
+              </ButtonLink>
+              <a
+                href="https://www.linkedin.com/in/paul-adrian-pascual-a87866368/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:border-accent hover:text-accent-ink"
+              >
+                <FaLinkedinIn className="h-4 w-4" aria-hidden />
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/Rian316"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg border border-border-strong px-5 py-2.5 text-sm font-medium text-foreground transition-all hover:border-accent hover:text-accent-ink"
+              >
+                <SiGithub className="h-4 w-4" aria-hidden />
+                GitHub
+              </a>
+            </div>
           </div>
         </Reveal>
       </Container>
