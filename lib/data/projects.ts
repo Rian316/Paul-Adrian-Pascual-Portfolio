@@ -192,6 +192,51 @@ export const projects: Project[] = [
     outcome:
       "In-development project demonstrating enterprise-grade architecture patterns for asset lifecycle management.",
   },
+  {
+    slug: "hr-recruitment-system",
+    title: "HR Recruitment System",
+    tagline: "Modern applicant tracking system with Kanban pipeline",
+    description:
+      "Full-featured ATS with Kanban pipeline, candidate profiles, interview scorecards, task management, offers, reports, and a public careers site.",
+    overview:
+      "HR Recruitment System is a modern Applicant Tracking System built to streamline the entire hiring workflow. It features a Kanban pipeline for tracking candidates through stages, detailed candidate profiles, interview scorecards for structured evaluation, task management for hiring teams, offer management, reporting dashboards, and a public careers site for job postings. Built with Next.js 16, TypeScript, Tailwind CSS, Prisma 7, and SQLite.",
+    highlights: [
+      "Kanban pipeline for tracking candidates through hiring stages.",
+      "Candidate profiles with full application history.",
+      "Interview scorecards for structured evaluation.",
+      "Task management for hiring team coordination.",
+      "Offer management and reporting dashboards.",
+      "Public careers site for job postings.",
+    ],
+    role: "Full-stack developer",
+    techStack: [
+      "Next.js 16",
+      "TypeScript",
+      "Prisma 7",
+      "SQLite",
+      "Tailwind CSS",
+    ],
+    status: "in-development",
+    repoUrl: "https://github.com/Rian316/hr-recruitment-system",
+    imageUrl: "/projects/hr-recruitment-system.svg",
+    accent: { from: "#ec4899", to: "#be185d" },
+    timeframe: "2026",
+    purpose: "Streamline hiring workflows with a modern applicant tracking system.",
+    problem:
+      "Recruitment teams juggle spreadsheets, email threads, and disconnected tools — leading to lost candidates, inconsistent evaluations, and slow hiring cycles.",
+    solution:
+      "Built a unified ATS with a Kanban pipeline for visual candidate tracking, structured scorecards for consistent interviews, task management for team coordination, and a public careers site to attract applicants — all in one platform.",
+    architecture:
+      "Next.js 16 App Router with TypeScript for type safety. Prisma 7 ORM with SQLite for relational data modelling across candidates, jobs, interviews, and offers. Tailwind CSS for a clean, responsive interface. Server Actions for mutations.",
+    challenges:
+      "Designing a flexible pipeline model that supports different hiring stages per job. Building scorecard templates that work across different role types. Ensuring the Kanban board remains performant with many candidates.",
+    security:
+      "Role-based access for HR teams vs hiring managers. Input validation on all forms. Secure data handling for candidate personal information.",
+    deployment:
+      "GitHub repository. Designed for Vercel deployment with SQLite for simplicity, with migration path to PostgreSQL for production scale.",
+    outcome:
+      "In-development ATS demonstrating full-stack recruitment workflow management — from job posting to offer letter.",
+  },
 ];
 
 /** Lookup by slug — used by the detail route and generateStaticParams. */
