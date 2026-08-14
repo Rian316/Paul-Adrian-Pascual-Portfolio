@@ -113,6 +113,36 @@ export const projects: Project[] = [
     timeframe: "2026",
     purpose: "Track and manage job applications with AI-powered assistance.",
   },
+  {
+    slug: "company-asset-management",
+    title: "Company Asset Management",
+    tagline: "Track and manage company assets and inventory",
+    description:
+      "A full-stack web application for managing company assets and inventory, built with modern web technologies. Features include asset tracking, inventory management, and reporting capabilities.",
+    overview:
+      "Company Asset Management is a comprehensive system designed to help organizations track and manage their physical and digital assets. It provides features for asset registration, lifecycle management, assignment tracking, and reporting. The application is built with a focus on usability and reliability, ensuring organizations can maintain accurate asset records.",
+    highlights: [
+      "Asset registration and lifecycle management.",
+      "Inventory tracking and reporting capabilities.",
+      "User-friendly interface for easy asset management.",
+      "Scalable architecture for growing organizations.",
+      "Modern tech stack for performance and reliability.",
+    ],
+    role: "Full-stack developer",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Prisma ORM",
+      "PostgreSQL",
+      "TailwindCSS",
+      "shadcn/ui",
+    ],
+    status: "in-development",
+    imageUrl: "/projects/company-asset-management.svg",
+    accent: { from: "#f59e0b", to: "#d97706" },
+    timeframe: "2026",
+    purpose: "Streamline company asset tracking and inventory management.",
+  },
 ];
 
 /** Lookup by slug — used by the detail route and generateStaticParams. */
