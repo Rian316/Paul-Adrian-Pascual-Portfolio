@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Download, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { siteConfig } from "@/lib/site";
 import { socialLinks } from "@/lib/data/social";
 import { ButtonLink } from "@/components/ui/button-link";
@@ -83,15 +83,6 @@ export function Hero() {
           <ButtonLink href="/work" size="lg">
             View my work
             <ArrowRight className="h-4 w-4" aria-hidden />
-          </ButtonLink>
-          <ButtonLink
-            href={siteConfig.resumeUrl}
-            size="lg"
-            variant="outline"
-            external
-          >
-            <Download className="h-4 w-4" aria-hidden />
-            Download résumé
           </ButtonLink>
         </motion.div>
 

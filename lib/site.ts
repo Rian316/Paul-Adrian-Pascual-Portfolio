@@ -1,3 +1,5 @@
+import { projects } from "@/lib/data/projects";
+
 /**
  * Single source of truth for site-wide identity and SEO.
  *
@@ -61,7 +63,7 @@ export type SiteConfig = typeof siteConfig;
 /** Stats surfaced in the hero stats band. */
 export const stats = [
   {
-    value: "3",
+    value: String(projects.length),
     label: "Platforms built end-to-end",
   },
   {

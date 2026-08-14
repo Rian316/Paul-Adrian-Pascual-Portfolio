@@ -16,7 +16,6 @@ import {
   SiGithub,
   SiClaude,
   SiMysql,
-  SiMicrosoftsqlserver,
   SiHuawei,
   SiSap,
 } from "react-icons/si";
@@ -25,6 +24,7 @@ import {
   LuServerCog,
   LuShieldCheck,
   LuBrainCircuit,
+  LuDatabase,
 } from "react-icons/lu";
 import type { TechCategory } from "@/types/tech";
 
@@ -64,7 +64,7 @@ export const techStack: TechCategory[] = [
     caption: "Durable storage and sessions.",
     items: [
       { name: "PostgreSQL", icon: SiPostgresql, note: "Hosted on Neon" },
-      { name: "Microsoft SQL Server", icon: SiMicrosoftsqlserver, note: "Database administration" },
+      { name: "Microsoft SQL Server", icon: LuDatabase, note: "Database administration" },
       { name: "MySQL", icon: SiMysql },
       { name: "Prisma ORM", icon: SiPrisma, note: "Schema & migrations" },
       { name: "Auth.js v5", icon: LuShieldCheck, note: "Sessions & providers" },

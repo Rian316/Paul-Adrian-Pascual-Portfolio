@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
-import { Download, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -91,15 +91,6 @@ export function Navbar() {
 
         <div className="flex items-center gap-2">
           <ThemeToggle />
-          <a
-            href={siteConfig.resumeUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden items-center gap-2 rounded-lg bg-accent px-4 py-2 text-sm font-medium text-accent-contrast transition-all hover:brightness-105 md:inline-flex"
-          >
-            <Download className="h-4 w-4" aria-hidden />
-            Resume
-          </a>
           <button
             type="button"
             aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -158,17 +149,6 @@ export function Navbar() {
                     </li>
                   );
                 })}
-                <li className="pt-2">
-                  <a
-                    href={siteConfig.resumeUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-medium text-accent-contrast"
-                  >
-                    <Download className="h-4 w-4" aria-hidden />
-                    Download résumé (PDF)
-                  </a>
-                </li>
               </ul>
             </motion.div>
           </>
