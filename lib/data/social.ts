@@ -5,8 +5,8 @@ import type { SocialLink, SocialPlatform } from "@/types/social";
 
 /** Contact details. Single source of truth for the whole site. */
 export const EMAIL = "paulpascual316@gmail.com";
-export const PHONE_DISPLAY = "0993 748 2681";
-export const PHONE_TEL = "+639937482681"; // PH mobile in E.164
+export const PHONE_DISPLAY = "0935 460 3236";
+export const PHONE_TEL = "+639354603236"; // PH mobile in E.164
 
 export const socialLinks: SocialLink[] = [
   {

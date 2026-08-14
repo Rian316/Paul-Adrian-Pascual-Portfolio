@@ -69,6 +69,14 @@ export function BentoAbout() {
             </p>
             <p className="text-sm text-muted">{education.school}</p>
             <p className="font-mono text-xs text-faint">{education.years}</p>
+            {education.highSchool && (
+              <>
+                <div className="my-2 border-t border-border" />
+                <p className="font-medium">{education.highSchool.strand}</p>
+                <p className="text-sm text-muted">{education.highSchool.school}</p>
+                <p className="font-mono text-xs text-faint">{education.highSchool.years}</p>
+              </>
+            )}
           </div>
         </div>
       </Reveal>

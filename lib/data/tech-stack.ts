@@ -15,6 +15,10 @@ import {
   SiGit,
   SiGithub,
   SiClaude,
+  SiMysql,
+  SiMicrosoftsqlserver,
+  SiHuawei,
+  SiSap,
 } from "react-icons/si";
 import {
   LuBot,
@@ -60,6 +64,9 @@ export const techStack: TechCategory[] = [
     caption: "Durable storage and sessions.",
     items: [
       { name: "PostgreSQL", icon: SiPostgresql, note: "Hosted on Neon" },
+      { name: "Microsoft SQL Server", icon: SiMicrosoftsqlserver, note: "Database administration" },
+      { name: "MySQL", icon: SiMysql },
+      { name: "Prisma ORM", icon: SiPrisma, note: "Schema & migrations" },
       { name: "Auth.js v5", icon: LuShieldCheck, note: "Sessions & providers" },
     ],
   },
@@ -89,6 +96,7 @@ export const techStack: TechCategory[] = [
         icon: SiAlibabacloud,
         note: "ECS · RDS · OSS · CDN",
       },
+      { name: "Huawei Cloud", icon: SiHuawei },
       { name: "Vercel", icon: SiVercel, note: "Preview & edge" },
       { name: "Docker", icon: SiDocker },
       { name: "NGINX", icon: SiNginx, note: "Reverse proxy" },
@@ -102,6 +110,14 @@ export const techStack: TechCategory[] = [
       { name: "Claude Code", icon: SiClaude, note: "AI pair programming" },
       { name: "Git", icon: SiGit },
       { name: "GitHub", icon: SiGithub },
+    ],
+  },
+  {
+    category: "Enterprise & Automation",
+    caption: "Business systems and process tools.",
+    items: [
+      { name: "SAP Business One", icon: SiSap, note: "ERP system" },
+      { name: "REST APIs", icon: LuBot, note: "API design" },
     ],
   },
 ];

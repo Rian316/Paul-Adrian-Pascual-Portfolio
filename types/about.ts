@@ -20,4 +20,9 @@ export interface Education {
   gwa: string;
   school: string;
   years: string;
+  highSchool?: {
+    strand: string;
+    school: string;
+    years: string;
+  };
 }
