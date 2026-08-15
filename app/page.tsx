@@ -6,7 +6,7 @@ import { Hero } from "@/components/home/hero";
 import { StatsBand } from "@/components/home/stats-band";
 import { Capabilities } from "@/components/home/capabilities";
 import { TechStack } from "@/components/home/tech-stack";
-import { TechPills } from "@/components/home/tech-pills";
+
 import { BentoAbout } from "@/components/home/bento-about";
 import { ProfessionalHighlights } from "@/components/home/professional-highlights";
 import { ExperienceSnapshot } from "@/components/home/experience-snapshot";
@@ -48,7 +48,7 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Selected Work"
             title="What I've built"
-            description="Production and in-progress platforms — each one taken from data model to deployment."
+            description="Platforms I've built from data model to deployment — production and in-progress."
           />
           <ButtonLink href="/work" variant="ghost" className="px-0">
             All projects
@@ -108,9 +108,6 @@ export default function HomePage() {
         />
         <div className="mt-10">
           <TechStack />
-        </div>
-        <div className="mt-6">
-          <TechPills />
         </div>
       </Section>
 

@@ -70,14 +70,14 @@ export function LoadingScreen() {
               />
             </div>
 
-            {/* Percentage */}
+            {/* Subtle loading indicator */}
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
               className="font-mono text-xs tracking-widest text-muted/60"
             >
-              {Math.min(Math.round(progress), 100)}%
+              Loading...
             </motion.span>
           </div>
         </motion.div>

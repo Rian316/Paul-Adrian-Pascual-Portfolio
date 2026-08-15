@@ -45,7 +45,7 @@ export const projects: Project[] = [
     challenges:
       "HMO rules are complex — each provider has different coverage, approval workflows, and claim processes. Modelling this into a flexible data schema while keeping the booking flow simple required careful domain modelling. Concurrency handling for simultaneous bookings was critical to prevent double-booking.",
     security:
-      "22-PR security and reliability audit covering: rate limiting on auth endpoints, login circuit breakers, transaction safety for booking mutations, concurrency locks on availability checks, RBAC for all admin operations, and audit logging on sensitive actions.",
+      "Security and reliability hardening covering: rate limiting on auth endpoints, login circuit breakers, transaction safety for booking mutations, concurrency locks on availability checks, RBAC for all admin operations, and audit logging on sensitive actions.",
     deployment:
       "Deployed on Vercel with Neon PostgreSQL (AWS Singapore). Environment-based configuration for staging and production. Planned migration to Alibaba ApsaraDB RDS for production compliance.",
     outcome:

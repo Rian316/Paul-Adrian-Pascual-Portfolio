@@ -6,7 +6,7 @@ export const capabilities = [
     icon: Rocket,
     title: "Full-stack product ownership",
     description:
-      "From data model to deployment — booking, payments, auth, admin, and AI built end-to-end. Production SaaS platforms shipped solo.",
+      "From data model to deployment — booking, payments, auth, admin, and AI built end-to-end across multiple SaaS platforms.",
     techs: ["Next.js", "React", "TypeScript", "Prisma", "PostgreSQL"],
   },
   {

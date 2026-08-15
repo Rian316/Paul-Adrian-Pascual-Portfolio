@@ -19,7 +19,7 @@ export const highlights = [
   {
     icon: Shield,
     title: "Security-First Architecture",
-    description: "RBAC, audit logging, rate limiting, transaction safety — hardened through a 22-PR security audit.",
+    description: "RBAC, audit logging, rate limiting, transaction safety — hardened through systematic security reviews.",
   },
   {
     icon: Briefcase,
@@ -35,7 +35,7 @@ export const highlights = [
 
 export const impactMetrics = [
   {
-    value: "4",
+    value: "5",
     label: "Full-stack platforms built",
     detail: "From data model to production deployment",
   },
@@ -43,11 +43,6 @@ export const impactMetrics = [
     value: "2",
     label: "Production SaaS systems",
     detail: "Live in production with real users",
-  },
-  {
-    value: "22",
-    label: "Security PRs in one audit",
-    detail: "Concurrency, RBAC, rate limiting, audit logging",
   },
   {
     value: "7",

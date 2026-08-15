@@ -14,12 +14,12 @@ import { TechStack } from "@/components/home/tech-stack";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Paul Adrian O. Pascual — AI-Driven Full-Stack Developer. BS Information Technology (Cum Laude), from GIS-focused systems work at DPWH to building production SaaS platforms with cloud deployment and AI integrations.",
+    "Paul Adrian O. Pascual — Full-Stack Developer. BS Information Technology (Cum Laude), from GIS-focused systems work at DPWH to building SaaS platforms with cloud deployment and AI integrations.",
   alternates: { canonical: "/about" },
   openGraph: {
     title: "About · Paul Pascual",
     description:
-      "AI-Driven Full-Stack Developer — from GIS systems to production SaaS with cloud and AI.",
+      "Full-Stack Developer — from GIS systems to SaaS platforms with cloud and AI.",
     url: "/about",
   },
 };
